@@ -6,7 +6,7 @@ html {
 }
 
 body{
-  @apply bg-zinc-900 text-zinc-50 h-[200vh]
+  @apply bg-zinc-900 text-zinc-50 h-[200vh];
 }
 
 /** 
@@ -15,7 +15,19 @@ body{
 
 
  .menu-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 
+  @apply w-10 h-10 bg-zinc-50/10 
   rounded-xl ring-inset ring-1 ring-zinc-50/20 backdrop-blur-2xl
    hover:bg-zinc-50/15 transition-transform active:scale-95;
+}
+
+.navbar {
+  @apply absolute top-full right-0 mt-2 min-w-40 p-4
+  bg-zinc-900/90 rounded-2xl ring-inset ring-1 ring-zinc-700 text-zinc-50
+  flex flex-col gap-4 isolate opacity-0 invisible scale-90 blur-sm
+  transition-opacity transition-transform transition-[filter] duration-300
+  md:static md:flex md:flex-row md:gap-6 md:opacity-100 md:visible md:scale-100 md:blur-none md:bg-transparent md:ring-0 md:mt-0 md:p-0;
+}
+
+.navbar.active {
+  @apply opacity-100 visible scale-100 blur-none;
 }
